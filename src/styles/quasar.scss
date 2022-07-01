@@ -1,0 +1,54 @@
+@import './quasar.variables.scss';
+@import '~quasar-styl';
+
+// @import '~quasar-addon-styl';
+*{
+  word-break: keep-all;
+}
+
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin:0;
+  padding:0;
+  letter-spacing: -0.7px;
+}
+
+p{
+  margin:0;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+input::placeholder{
+  color:$grey-7 !important;
+  font-size:12px;
+  letter-spacing: -.4px;
+}
+
+dl,dt,dd{
+  padding:0;
+  margin:0;
+}
+
+
+
+.q-field__control{
+  height:45px;
+}
+.q-field--outlined .q-field__control:before{
+  border-radius:8px;
+}
+
+.q-field--outlined .q-field__control:after{
+  border-radius:8px;
+}
+
+.q-field__marginal{
+  height:unset
+}

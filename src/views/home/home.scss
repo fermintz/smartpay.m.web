@@ -1,0 +1,25 @@
+.home{
+  height:100vh;
+  .bottom-navi{
+    position: fixed;
+    width:100%;
+    bottom:0px;
+    border-top:1px solid #e2e2e2;
+    padding:5px 40px;
+    z-index:99;
+    background:#fff;
+
+    .q-tab{
+      border-radius:5px;
+    }
+
+    label{
+      font-size:9px;
+    }
+  }
+
+  .q-tab-panel{
+    padding:0 25px;
+    padding-bottom:80px;
+  }
+}

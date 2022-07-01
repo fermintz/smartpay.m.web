@@ -1,0 +1,131 @@
+.product{
+  .title{
+    margin-bottom:30px;
+    h5{
+      font-size:22px;
+      font-weight:normal;
+      b{
+        font-weight:bold;
+        color:$primary
+      }
+    }
+
+    p{
+      color:$grey-7;
+      margin:0;
+      margin-top:8px;
+
+      b{
+        color:$dark
+      }
+    }
+  }
+
+  .selectBtns{
+    position: relative;
+    background:$grey-3;
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom:30px;
+
+    .q-btn{
+      position: relative;
+      z-index:2;
+      flex:1;
+      height:50px;
+      border-radius:25px;
+      color:$grey-7;
+    }
+    .q-btn.active{
+      color:#fff;
+    }
+
+    span{
+      z-index:1;
+      position: absolute;
+      left:0;
+      width:50%;
+      background:$primary;
+      border-radius:25px;
+      height:50px;
+      transition: left .3s ease;
+    }
+
+    span.right{
+      left:50%;
+    }
+  }
+
+
+  h6{
+    font-size:16px;
+    margin-bottom:10px;
+
+    b{
+      color:$secondary;
+    }
+  }
+  
+
+
+  .goodsList{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+
+    .goodsItem{
+      border:1px solid $grey-5;
+      padding:15px;
+      border-radius:8px;
+      align-items: center;
+     
+        span,strong{
+          display:block;
+        }
+
+        .left{
+          flex:1;
+          margin-right:20px;
+
+          label{
+            color:$secondary;
+            font-size:12px;
+            font-weight:bold;
+          }
+          strong{
+            font-size:14px;
+            font-weight:normal;
+            line-height:1.2;
+            margin:2px 0;
+          }
+          span{
+            font-size:12px;
+            
+            color:$grey-7;
+          }
+        } 
+
+        .right{
+          span{
+            text-align:right;
+            font-size:12px;
+            color:$grey-7;
+            text-decoration: line-through;
+          }
+          strong{
+            font-size:20px;
+            line-height:1;
+            color:$primary;
+
+            &:after{
+              content:'원';
+              font-size:14px;
+              font-weight:normal;
+              color:$dark;
+            }
+          }
+ 
+      }
+    }
+  }
+}
