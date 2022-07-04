@@ -1,13 +1,13 @@
 <template>
-  <Header/>
   <div class="mypage">
+    <Header/>
     <div class="myPoint">
       <span>4561님의 보유포인트</span>
       <strong>5,500P</strong>
     </div>
     <div class="btns row">
-      <q-btn flat>비밀번호 변경</q-btn>
-      <q-btn flat>로그아웃</q-btn>
+      <q-btn flat @click="passChange">비밀번호 변경</q-btn>
+      <q-btn flat @click="confirm">로그아웃</q-btn>
     </div>
     <div class="divider"/>
 
@@ -54,25 +54,33 @@
     </div>
   </div>
 
-  <Confirm />
   <PassChange />
 </template>
 
 <script lang="ts" setup>
+import { useQuasar } from "quasar";
 import Header from '@/components/header.vue'
 import Confirm from '@/components/modal/confirm/confirm.vue'
 import PassChange from '@/components/modal/passChange/passChange.vue';
-
 import {ref} from 'vue'
 
 const items = ref([{},{},{},{},{}])
 
-const onLoad = (index, done)=>{
-  // setTimeout(()=>{
-  //   items.value.push({},{},{})
-  //   done()
-  // },2000)
-}
+const $q = useQuasar();
+
+const confirm = async () => {
+  const { onOk } = await $q.dialog({
+    component: Confirm,
+    componentProps: { title: "로그아웃", message: "로그아웃 하시겠습니까?" },
+  });
+};
+
+const passChange = async () => {
+  const { onOk } = await $q.dialog({
+    component: PassChange,
+  });
+};
+
 
 </script>
 

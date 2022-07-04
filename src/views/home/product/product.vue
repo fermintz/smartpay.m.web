@@ -1,69 +1,127 @@
 <template>
-  <Header />
   <div class="product">
+    <Header />
     <div class="title">
-      <h5>선택된 장비는 <b>A01-세탁기</b> 입니다 이거보다 더 길어지면?</h5>
+      <h5>선택된 장비는 <b>A01-세탁기</b> 입니다</h5>
       <p>장비를 다시 선택하시려면 <b>QR코드</b>를 다시 스캔해주세요</p>
     </div>
 
     <div class="selectBtns row">
-      <q-btn flat 
-        v-for="(item, index) in ['상품선택','투입금액 직접입력']" 
-        :key="item" 
-        :class="{active:tabState === index}"
+      <q-btn
+        flat
+        v-for="(item, index) in ['상품선택', '투입금액 직접입력']"
+        :key="item"
+        :class="{ active: tabState === index }"
         @click="tabState = index"
       >
-          {{item}}
+        {{ item }}
       </q-btn>
-      <span :class="{right:tabState === 1}"></span>
+      <span :class="{ right: tabState === 1 }"></span>
     </div>
 
-    <h6>상품목록 <b>7개</b></h6>
+    <div class="tabCont" v-show="tabState === 0">
+      <h6>상품목록 <b>7개</b></h6>
 
-    <div class="goodsList">
-      <div class="goodsItem row">
-        <div class="left">
-          <label>Event</label>
-          <strong>이름이 매우매우 긴 간편한 세탁</strong>
-          <span span>15분</span>
-        </div>
-        <div class="right">
-          <span>9,000원</span>
-          <strong>
-            7,000
-          </strong>
-        </div>
-      </div>
-
-      <div class="goodsItem row" v-for="item in 5" :key="item">
-        <div class="left">
-          <label v-show="false">이벤트</label>
-          <div class="info">
-            <strong>기본세탁</strong>
+      <div class="goodsList">
+        <div class="goodsItem row" @click="$router.push('detail')">
+          <div class="left">
+            <label>Event</label>
+            <strong>이름이 매우매우 긴 간편한 세탁</strong>
             <span span>15분</span>
           </div>
-          
+          <div class="right">
+            <span>9,000원</span>
+            <strong> 7,000 </strong>
+          </div>
         </div>
-        <div class="right">
-          <span v-show="false">9,000원</span>
-          <strong>
-            7,000
-          </strong>
+
+        <div class="goodsItem row" v-for="item in 5" :key="item">
+          <div class="left">
+            <label v-show="false">이벤트</label>
+            <div class="info">
+              <strong>기본세탁</strong>
+              <span span>15분</span>
+            </div>
+          </div>
+          <div class="right">
+            <span v-show="false">9,000원</span>
+            <strong> 7,000 </strong>
+          </div>
         </div>
       </div>
     </div>
 
+    <div class="tabCont" v-show="tabState === 1">
+      <h6>투입하실 금액을 입력해주세요</h6>
+      <div class="coinInput">
+        <div class="coinState">
+          {{ coin }}
+        </div>
+        <div class="btns">
+          <q-btn flat @click="coin += 500">500원</q-btn>
+          <q-btn flat @click="coin += 1000">1,000원</q-btn>
+          <q-btn flat @click="alert">초기화</q-btn>
+        </div>
+
+        <div class="finish">
+          <!-- <q-btn flat @click="$router.push('detail')"> 입력완료 </q-btn> -->
+          <q-btn flat @click="confirm"> 입력완료 </q-btn>
+        </div>
+      </div>
+    </div>
+    <AlertModal />
   </div>
 </template>
 
 <script lang="ts" setup>
-import Header from '@/components/header.vue'
-import {ref} from 'vue'
+import Header from "@/components/header.vue";
+import Confirm from "@/components/modal/confirm/confirm.vue";
+import Alert from "@/components/modal/alert/alert.vue";
+import { useQuasar, } from "quasar";
+import { onBeforeUnmount, ref } from "vue";
 
 const tabState = ref(0);
+const coin = ref(0);
 
+const $q = useQuasar();
+let timer
+
+const confirm = async () => {
+  const { onOk } = await $q.dialog({
+    component: Confirm,
+    componentProps: { title: "투입금액확인", message: "5,000원을 투입하시겠습니까?" },
+  });
+};
+
+onBeforeUnmount(()=>{
+  if(timer !== void 0){
+    clearTimeout(timer)
+    $q.loading.hide()
+  }
+})
+
+
+const showLoading = ()=>{    
+  $q.loading.show({
+    message:'자료를 불러오는 중입니다.',
+    spinnerSize:70,
+  })
+
+  timer = setTimeout(()=>{
+    $q.loading.hide()
+    timer = void 0
+  },1500)
+}
+
+showLoading();
+
+
+const alert = async ()=>{
+  const {onOk} = await $q.dialog({
+    component: Alert,
+    componentProps: {title:'경고', message: '잘못된 접근입니다'}
+  })
+}
 </script>
 
-<style lang="scss" scoped src="./product.scss">
-
-</style>
+<style lang="scss" scoped src="./product.scss"></style>

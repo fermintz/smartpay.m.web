@@ -107,7 +107,7 @@
             </li>
           </ul>
           
-          <q-btn flat class="nextBtn">
+          <q-btn flat class="nextBtn" @click="$router.push('/')">
             확인
           </q-btn>
         </q-form>

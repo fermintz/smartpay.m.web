@@ -1,4 +1,8 @@
 .product{
+  padding:0 25px;
+  padding-bottom:80px;
+  min-height:100vh;
+  
   .title{
     margin-bottom:30px;
     h5{
@@ -124,8 +128,51 @@
               color:$dark;
             }
           }
- 
+
+          
+        
       }
     }
   }
+
+
+  .coinInput{
+    .coinState{
+      font-size:18px;
+      height:50px;
+      border-radius:8px;
+      display:flex;
+      padding:0 15px;
+      font-weight:600;
+      align-items: center;
+      background:$primary-1;
+      color:$primary;
+    }
+
+    .btns{
+      display:flex;
+      align-items: center;
+      gap:10px;
+      margin-top:10px;
+      .q-btn{
+        flex:1;
+        border:1px solid $dark;
+        border-radius:8px;
+      }
+    }
+
+    .finish{
+      .q-btn{
+        width:100%;
+        height:50px;
+        margin-top:20px;
+        background:$dark;
+        color:#fff;
+        border-radius:8px;
+      }
+    }
+    
+    
+  }
 }
+

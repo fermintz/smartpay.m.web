@@ -1,18 +1,55 @@
 .q-card{
-  min-width:300px;
+  min-width:90%;
   border-radius:8px;
-}
 
-.inner{
-  display:flex;
-  flex-direction: column;
-  gap:10px;
+  .top{
+    padding:15px;
+    .head{
+      display:flex;
+      align-items: center;
 
-  .input-form{
-    label{
-      display:block;
-      font-size:12px;
-      margin-bottom:5px;
+      h6{
+        font-size:18px;
+      }
+
+      .q-icon{
+        font-size:22px;
+        margin-right:5px;
+        color:$primary;
+      }
     }
+    .cont{
+      margin-top:10px;
+
+      .divider{
+        height:1px;
+        margin:20px 0;
+        background:$grey-4;
+      }
+    }
+  }
+
+  .bottom{
+    width:100%;
+    background:$grey-3;
+    padding:10px;
+    margin-top:5px;
+
+    .q-btn{
+      height:38px;
+      border-radius:8px;
+      min-width:80px;
+      color:#fff;
+    }
+
+    .q-btn.cancle{
+      background:$grey-5;
+      margin-right:5px;
+    }
+
+    .q-btn.ok{
+      background:$primary;
+    }
+
   }
 }

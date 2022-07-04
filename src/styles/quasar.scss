@@ -4,6 +4,7 @@
 // @import '~quasar-addon-styl';
 *{
   word-break: keep-all;
+  line-height:1.4;
 }
 
 *, *:before, *:after{
@@ -27,7 +28,7 @@ ul{
 
 input::placeholder{
   color:$grey-7 !important;
-  font-size:12px;
+  font-size:14px;
   letter-spacing: -.4px;
 }
 

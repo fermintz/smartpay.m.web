@@ -1,0 +1,49 @@
+.q-card{
+  min-width:90%;
+  border-radius:8px;
+
+  .top{
+    padding:15px;
+    .head{
+      display:flex;
+      align-items: center;
+
+      h6{
+        font-size:18px;
+      }
+
+      .q-icon{
+        font-size:22px;
+        margin-right:5px;
+        color:$secondary;
+      }
+    }
+    .cont{
+      margin-top:10px;
+    }
+  }
+
+  .bottom{
+    width:100%;
+    background:$grey-3;
+    padding:10px;
+    margin-top:5px;
+
+    .q-btn{
+      height:38px;
+      border-radius:8px;
+      min-width:80px;
+      color:#fff;
+    }
+
+    .q-btn.cancle{
+      background:$grey-5;
+      margin-right:5px;
+    }
+
+    .q-btn.ok{
+      background:$secondary;
+    }
+
+  }
+}

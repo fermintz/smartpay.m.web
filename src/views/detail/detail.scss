@@ -1,0 +1,192 @@
+.header{
+  display:flex;
+  align-items: center;
+  height:70px;
+  padding:0 15px;
+
+  .q-btn{
+    background:$grey-3;
+  }
+
+  h6{
+    margin-left:15px;
+  }
+}
+
+.detail{
+  padding:25px;
+
+  .divider{
+    height:1px;
+    background:$grey-4;
+    margin:30px 0;
+  }
+
+  .title{
+    margin-bottom:40px;
+    h5{
+      font-size:22px;
+      font-weight:normal;
+
+      b{
+        color:$primary
+      }
+    }
+    p{
+      margin-top:5px;
+      color:$grey-7;
+    }
+  }
+
+  dl{
+    dt{
+      font-weight:bold;
+      font-size:16px;
+    }
+    dd{
+      margin-top:15px;
+    }
+  }
+
+
+  dl.goods{
+    dt{}
+    dd{
+      height:45px;
+      display:flex;
+      align-items: center;
+      background:$grey-2;
+      border-radius:8px;
+
+      padding:0 15px;
+      span{font-size:12px;flex:1;margin-right:20px;}
+      strong{
+        font-size:16px;
+      }
+    }
+  }
+
+  dl.point{
+    .myPoint{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      background:$primary-1;
+      border-radius:8px;
+      padding:0 15px;
+      height:50px;
+      margin-bottom:10px;
+      span{
+        font-size:12px;
+        color:$grey-7;
+      }
+      strong{
+        font-size:16px;
+        color:$primary;
+      }
+    }
+
+    .pointUse{
+      display:flex;
+     
+      .q-input{
+        flex:1;
+        margin-right:10px;
+      }
+
+      .q-btn{
+        border:1px solid $dark;
+        height:45px;
+        border-radius:8px;
+      }
+    }
+  }
+
+
+  .credit{
+
+    dd.credit_info{
+      border:1px solid $grey-4;
+      padding:15px;
+      border-radius:8px;
+
+      .total{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+
+        strong{
+          font-size:16px;
+          color:$secondary;
+        }
+      }
+      
+      ul{
+        display:flex;
+        flex-direction: column;
+        gap:8px;
+        margin:0;
+
+        li{
+          display:flex;
+          justify-content: space-between;
+          align-items: center;
+
+          span{
+            font-size:12px;
+          }
+        }
+      }
+    }
+
+    
+
+    .divider{
+      margin:15px 0;
+    }
+
+
+    dd.finish{
+      margin-top:15px;
+      
+      ul{
+        display:flex;
+        flex-direction: column;
+        gap:6px;
+        li{
+          display:flex;
+          align-items: center;
+          justify-content: space-between;
+          background:$grey-2;
+          height:45px;
+          padding:0 10px;
+          border-radius:8px;
+
+          .q-checkbox{
+            padding:0;
+            height:unset;
+          }
+          
+         
+          .q-btn.agreeBtn{
+            min-height:24px;
+            padding:0 8px;
+            font-size:12px;
+          }
+        }
+      }
+    }
+
+    dd.bottom_btns{
+      margin-top:40px;
+      .q-btn{
+        width:100%;
+        height:50px;
+        background:$primary;
+        color:#fff;
+        border-radius:8px;
+      }
+    }
+    
+  }
+}

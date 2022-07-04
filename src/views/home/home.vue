@@ -5,8 +5,7 @@
       animated
     >
       <q-tab-panel name="first">
-        <div class="text-h6">QR촬영</div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <Qrcode />
       </q-tab-panel>
       <q-tab-panel name="second">
         <Product />
@@ -50,6 +49,7 @@ import Header from '@/components/header.vue'
 import Customer from '@/views/home/customer/customer.vue'
 import Mypage from '@/views/home/mypage/mypage.vue'
 import Product from '@/views/home/product/product.vue'
+import Qrcode from '@/views/home/qrcode/qrcode.vue'
 
 const tab = ref('second')
 </script>

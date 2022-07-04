@@ -1,6 +1,6 @@
 import { ref } from "vue";
 
-const visible = ref(true);
+const visible = ref(false);
 
 export function userLoginModal() {
   function toggle() {

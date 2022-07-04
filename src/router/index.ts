@@ -13,10 +13,21 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/login/login.vue')
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue')
-  }
+    path: '/detail',
+    name: 'detail',
+    component: () => import('../views/detail/detail.vue')
+  },
+  {
+    path: '/finish',
+    name: 'finish',
+    component: () => import('../views/finish/finish.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('../views/error/404.vue')
+  },
+  
+  
 ]
 
 const router = createRouter({

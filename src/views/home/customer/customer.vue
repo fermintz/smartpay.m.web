@@ -1,11 +1,11 @@
 <template>
-  <Header />
+  
   <div class="customer">
+    <Header />
     
+    <!-- <div class="section banner">
     
-    <div class="section banner">
-    
-    </div>
+    </div> -->
 
     <div class="section">
       <h6>공지사항</h6>
@@ -34,11 +34,11 @@
         </div>
 
         <div class="agree_btns">
-          <q-btn flat class="full-width" align="between">
+          <q-btn flat class="full-width" align="between" @click="agree1">
             <label>서비스 이용약관</label>
             <q-icon name="arrow_right"></q-icon>
           </q-btn>
-          <q-btn flat class="full-width" align="between">
+          <q-btn flat class="full-width" align="between" @click="agree2">
             <label>개인정보 취급방침</label>
             <q-icon name="arrow_right"></q-icon>
           </q-btn>
@@ -51,6 +51,24 @@
 <script setup lang="ts">
 import ref from 'vue'
 import Header from '@/components/header.vue'
+import Agree from '@/components/modal/agree/agree.vue'
+import { useQuasar } from 'quasar';
+
+const $q = useQuasar()
+
+const agree1 = async ()=>{
+  const {onOk} = await $q.dialog({
+    component: Agree,
+    componentProps:{title:'서비스 이용약관'}
+  })
+} 
+
+const agree2 = async ()=>{
+  const {onOk} = await $q.dialog({
+    component: Agree,
+    componentProps:{title:'개인정보 취급방침'}
+  })
+} 
 
 </script>
 
