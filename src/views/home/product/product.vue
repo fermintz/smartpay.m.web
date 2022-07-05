@@ -69,6 +69,15 @@
         </div>
       </div>
     </div>
+
+    <div class="company">
+      <strong>(주)페이오티</strong>
+      <span>사업자등록번호: 599-81-00659</span>
+      <span>통신판매업: 2021-부산강서구-0877</span>
+      <span>소재지: 부산광역시 강서구 대저1동 2304-3</span>
+      <span>대표자: 차경진</span>
+      <span>연락처: 070-4709-1003</span>
+    </div>
     <AlertModal />
   </div>
 </template>
