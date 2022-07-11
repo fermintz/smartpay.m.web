@@ -87,17 +87,32 @@
     }
 
     .pointUse{
-      display:flex;
-     
-      .q-input{
-        flex:1;
-        margin-right:10px;
+      .pointUseView{
+        height:50px;
+        border-radius:8px;
+        background:#f2f2f2;
+        margin-bottom:10px;
+        display:flex;
+        align-items: center;
+        padding:0 15px;
+        font-size:20px;
       }
 
+      .pointUseBtns{
+        display:Flex;
+        gap:5px;
+      }
       .q-btn{
+        flex:1;
         border:1px solid $dark;
-        height:45px;
+        height:40px;
         border-radius:8px;
+      }
+
+      .q-btn.all{
+        background:$primary;
+        color:#fff;
+        border:0;
       }
     }
   }

@@ -63,15 +63,18 @@ import Header from '@/components/header.vue'
 import Confirm from '@/components/modal/confirm/confirm.vue'
 import PassChange from '@/components/modal/passChange/passChange.vue';
 import {ref} from 'vue'
+import { useRouter } from "vue-router";
 
 const items = ref([{},{},{},{},{}])
-
+const router = useRouter();
 const $q = useQuasar();
 
 const confirm = async () => {
   const { onOk } = await $q.dialog({
     component: Confirm,
     componentProps: { title: "로그아웃", message: "로그아웃 하시겠습니까?" },
+  }).onOk(()=>{
+    router.push('login')
   });
 };
 

@@ -96,4 +96,5 @@ const loginBtnState = function () {
     return true;
   }
 };
+
 </script>

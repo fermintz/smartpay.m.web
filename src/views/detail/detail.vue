@@ -29,10 +29,16 @@
           <strong>{{myPoint}}P</strong>
         </div>
         <div class="pointUse">
-          <q-input outlined placeholder="사용할 포인트 입력" type="tel" v-model="usePoint">
-
-          </q-input>
-          <q-btn flat @click="usePoint = myPoint">전액사용</q-btn>
+          <div class="pointUseView">
+            <span></span>
+            <strong>{{usePoint}}</strong>
+          </div>
+          <div class="pointUseBtns">
+            <q-btn flat @click="usePoint += 500">500</q-btn>
+            <q-btn flat @click="usePoint += 1000">1,000</q-btn>
+            <q-btn flat @click="usePoint = 0">초기화</q-btn>
+            <q-btn flat @click="usePoint = myPoint" class="all">전액사용</q-btn>
+          </div>
         </div>
       </dd>
     </dl>
