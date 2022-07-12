@@ -120,11 +120,15 @@
       ul{
         display:flex;
         flex-direction: column;
-        gap:10px;
+        gap:6px;
         li{
           display:flex;
           align-items: center;
           justify-content: space-between;
+          background:$grey-2;
+          height:45px;
+          padding:0 10px;
+          border-radius:8px;
 
           .q-checkbox{
             padding:0;

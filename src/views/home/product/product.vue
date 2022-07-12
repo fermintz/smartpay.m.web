@@ -23,7 +23,7 @@
       <h6>상품목록 <b>7개</b></h6>
 
       <div class="goodsList">
-        <!-- <div class="goodsItem row" @click="$router.push('detail')">
+        <div class="goodsItem row" @click="$router.push('detail')">
           <div class="left">
             <label>Event</label>
             <strong>이름이 매우매우 긴 간편한 세탁</strong>
@@ -33,7 +33,8 @@
             <span>9,000원</span>
             <strong> 7,000 </strong>
           </div>
-        </div> -->
+          <q-icon name="chevron_right" size="18px"></q-icon>
+        </div>
 
         <div class="goodsItem row" v-for="item in 3" :key="item">
           <div class="left">
