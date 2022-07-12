@@ -1,10 +1,10 @@
 <template>
   <div class="product">
     <Header />
-    <div class="title">
-      <span>선택됨</span>
+    <div class="title"> 
+      <span>선택된 장비</span>
       <h5 @click="alert">
-        <label>테스트 장비(사무실 조수원자리리리리리리)</label>
+        <label>테스트 장비</label>
         <q-icon name="arrow_drop_down_circle"></q-icon>
       </h5>
       <p>장비를 다시 선택하시려면 <b>QR코드</b>를 다시 스캔해주세요</p>
