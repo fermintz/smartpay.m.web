@@ -6,8 +6,14 @@
       <strong>5,500P</strong>
     </div>
     <div class="btns row">
-      <q-btn flat @click="passChange">비밀번호 변경</q-btn>
-      <q-btn flat @click="confirm">로그아웃</q-btn>
+      <q-btn flat @click="passChange">
+        <q-icon name="vpn_key" size="16px"></q-icon>
+        <span>비밀번호 변경</span>
+      </q-btn>
+      <q-btn flat @click="confirm">
+        <q-icon name="logout" size="16px"></q-icon>
+        <span>로그아웃</span>
+      </q-btn>
     </div>
     <div class="divider"/>
 
@@ -17,40 +23,37 @@
        </h6>
     </div>
     <div class="useList">
-      <q-infinite-scroll @load="onLoad" :offset="250">
-        <div class="useItem" v-for="item in items" :key="item">
-          <div class="top">
-            <label>장비결제</label>
-            <span>2022.04.12 12:45</span>
-          </div>
-          <div class="name">
-            세탁기 1번
-          </div>
-          <div class="state">
-            <dl>
-              <dt>결제금액</dt>
-              <dd>5,000원</dd>
-            </dl>
-            <dl>
-              <dt>사용포인트</dt>
-              <dd>0원</dd>
-            </dl>
-            <dl>
-              <dt>적립포인트</dt>
-              <dd>500P</dd>
-            </dl>
-            <dl class="last">
-              <dt>최종포인트</dt>
-              <dd>5,000P</dd>
-            </dl>
-          </div>
+      <div class="useItem" v-for="item in items" :key="item">
+        <div class="top">
+          <label>장비결제</label>
+          <span>2022.04.12 12:45</span>
         </div>
-        <template v-slot:loading >
-          <div class="row justify-center q-my-md">
-            <q-spinner-dots color="primary" size="40px" />
-          </div>
-        </template>
-      </q-infinite-scroll>
+        <div class="name">
+          세탁기 1번
+        </div>
+        <div class="state">
+          <dl>
+            <dt>결제금액</dt>
+            <dd>5,000원</dd>
+          </dl>
+          <dl>
+            <dt>사용포인트</dt>
+            <dd>0원</dd>
+          </dl>
+          <dl>
+            <dt>적립포인트</dt>
+            <dd>500P</dd>
+          </dl>
+          <dl class="last">
+            <dt>최종포인트</dt>
+            <dd>5,000P</dd>
+          </dl>
+        </div>
+      </div>
+      <q-btn flat>
+        <label>더보기</label>
+        <q-icon name="keyboard_arrow_down" size="14px" style="margin-left:5px;"></q-icon>
+      </q-btn>
     </div>
   </div>
 

@@ -23,7 +23,7 @@
       <h6>상품목록 <b>7개</b></h6>
 
       <div class="goodsList">
-        <div class="goodsItem row" @click="$router.push('detail')">
+        <!-- <div class="goodsItem row" @click="$router.push('detail')">
           <div class="left">
             <label>Event</label>
             <strong>이름이 매우매우 긴 간편한 세탁</strong>
@@ -33,9 +33,9 @@
             <span>9,000원</span>
             <strong> 7,000 </strong>
           </div>
-        </div>
+        </div> -->
 
-        <div class="goodsItem row" v-for="item in 5" :key="item">
+        <div class="goodsItem row" v-for="item in 3" :key="item">
           <div class="left">
             <label v-show="false">이벤트</label>
             <div class="info">
@@ -47,6 +47,7 @@
             <span v-show="false">9,000원</span>
             <strong> 7,000 </strong>
           </div>
+          <q-icon name="chevron_right" size="18px"></q-icon>
         </div>
       </div>
     </div>
@@ -58,9 +59,10 @@
           {{ coin }}
         </div>
         <div class="btns">
-          <q-btn flat @click="coin += 500">500원</q-btn>
-          <q-btn flat @click="coin += 1000">1,000원</q-btn>
-          <q-btn flat @click="alert">초기화</q-btn>
+          <q-btn flat @click="coin = 0">초기화</q-btn>
+          <q-btn flat @click="coin -= 500">-500원</q-btn>
+          <q-btn flat @click="coin += 500">+500원</q-btn>
+          
         </div>
 
         <div class="finish">
@@ -69,6 +71,8 @@
         </div>
       </div>
     </div>
+
+    <div class="divider"></div>
 
     <div class="company">
       <strong>(주)페이오티</strong>

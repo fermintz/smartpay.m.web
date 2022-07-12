@@ -7,13 +7,13 @@
     
     </div> -->
 
-    <div class="section">
+    <!-- <div class="section">
       <h6>공지사항</h6>
       <div class="notice">
         <strong>21.06.14</strong>
         <p>안녕하세요 워시앤클린 광안점입니다 오늘부터 적립 2배 이벤트를 시작합니다 많은 이용 부탁드립니다</p>
       </div>
-    </div>
+    </div> -->
 
     <div class="section">
       <h6>고객센터</h6>

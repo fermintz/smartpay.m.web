@@ -3,11 +3,20 @@
     <div class="top">
       <div class="logo">
         <img src="@/assets/img/logo_b.png" />
+        <span>워시프렌즈 금정점</span>
       </div>
-      <h5>
-        장비이용을 위해<br />
-        <b>휴대폰번호</b>를 입력해주세요
-      </h5>
+      
+
+      <div class="text">
+        <p>
+          <b>A01세탁기</b>를 선택하셨습니다
+        </p>
+        <h5>
+          <b>5초만에 회원가입</b>하고 간편하게 스마트페이를 사용해보세요
+        </h5>
+      </div>
+      
+      
 
       <q-form @submit="toggle">
         <label>휴대폰번호 입력</label>
