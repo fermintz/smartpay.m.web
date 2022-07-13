@@ -23,8 +23,23 @@
 
       <div class="tab-contents">
         <ul>
-          <li v-for="item in 2" :key="item">
-            <label>세탁장비 01번</label>
+          <li>
+            <div class="title">
+              <span>현재 선택된 장비</span>
+              <label label>세탁장비 01번</label>
+            </div>
+            <q-icon name="navigate_next"></q-icon>
+          </li>
+          <li>
+            <div class="title">
+              <label label>세탁장비 02번</label>
+            </div>
+            <q-icon name="navigate_next"></q-icon>
+          </li>
+          <li>
+            <div class="title">
+              <label label>세탁장비 03번</label>
+            </div>
             <q-icon name="navigate_next"></q-icon>
           </li>
         </ul>
