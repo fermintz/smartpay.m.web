@@ -1,13 +1,12 @@
 <template>
   <div class="product">
     <Header />
-    <div class="title"> 
-      <span>선택된 장비</span>
-      <h5 @click="alert">
-        <label>테스트 장비</label>
-        <q-icon name="arrow_drop_down_circle"></q-icon>
-      </h5>
-      <p>장비를 다시 선택하시려면 <b>QR코드</b>를 다시 스캔해주세요</p>
+    <div class="top">
+      <p>고객님이 선택하신 장비는</p>
+      <div class="selectBtn">
+        <label>세탁장비 01번 입니다만 아닌가 모르겠네</label>
+        <q-icon name="expand_more" size="18px"></q-icon>
+      </div>
     </div>
 
     <div class="selectBtns row">
@@ -88,6 +87,7 @@
       <span>연락처: 070-4709-1003</span>
     </div>
     <AlertModal />
+    <EqSelector />
   </div>
 </template>
 
@@ -95,6 +95,7 @@
 import Header from "@/components/header.vue";
 import Confirm from "@/components/modal/confirm/confirm.vue";
 import Alert from "@/components/modal/alert/alert.vue";
+import EqSelector from '@/components/modal/eqSelector/eqSelector.vue'
 import { useQuasar, } from "quasar";
 import { onBeforeUnmount, ref } from "vue";
 
