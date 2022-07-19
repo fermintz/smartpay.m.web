@@ -18,13 +18,13 @@
 
     <div class="useListTop">
        <h6>
-        이용내역 <b>3개</b>
+        이용내역
        </h6>
     </div>
     <div class="useList">
       <div class="noData">
-        <q-icon name="qr_code" size="40px" style="color:#c2c2c2;"></q-icon>
-        <p>장비를 이용하신 기록이 없습니다.</p>
+        <!-- <q-icon name="qr_code" size="40px" style="color:#c2c2c2;"></q-icon> -->
+        <p>이용하신 기록이 없습니다.</p>
         <q-btn flat>
           <span>장비이용 바로가기</span>
           <q-icon name="navigate_next"></q-icon>

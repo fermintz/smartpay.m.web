@@ -7,7 +7,7 @@
     margin-bottom:40px;
 
     p{
-      color:#797979;
+      color:#898989;
       margin-bottom:5px;
     }
 
@@ -72,15 +72,17 @@
   h6{
     display:flex;
     align-items: center;
-    font-size:16px;
+    font-size:14px;
     margin-bottom:10px;
     font-weight:normal;
+    color:#898989;
+
 
     &::before{
       display:inline-block;
       margin-right:5px;
       content:'';
-      height:16px;
+      height:14px;
       width:3px;
       background:#e2e2e2;
     }
