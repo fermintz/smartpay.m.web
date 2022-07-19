@@ -15,7 +15,6 @@
         <span>로그아웃</span>
       </q-btn>
     </div>
-    <div class="divider"/>
 
     <div class="useListTop">
        <h6>
@@ -23,7 +22,15 @@
        </h6>
     </div>
     <div class="useList">
-      <div class="useItem" v-for="item in items" :key="item">
+      <div class="noData">
+        <q-icon name="qr_code" size="40px" style="color:#c2c2c2;"></q-icon>
+        <p>장비를 이용하신 기록이 없습니다.</p>
+        <q-btn flat>
+          <span>장비이용 바로가기</span>
+          <q-icon name="navigate_next"></q-icon>
+        </q-btn>
+      </div>
+      <div class="useItem" v-for="item in items" :key="item" v-show="false">
         <div class="top">
           <label>장비결제</label>
           <span>2022.04.12 12:45</span>
@@ -50,7 +57,7 @@
           </dl>
         </div>
       </div>
-      <q-btn flat>
+      <q-btn flat  v-show="false">
         <label>더보기</label>
         <q-icon name="keyboard_arrow_down" size="14px" style="margin-left:5px;"></q-icon>
       </q-btn>

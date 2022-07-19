@@ -30,13 +30,13 @@
         </div>
         <div class="pointUse">
           <div class="pointUseView">
-            <span></span>
-            <strong>{{usePoint}}</strong>
+            <span>사용포인트</span>
+            <strong>{{usePoint}}P</strong>
           </div>
           <div class="pointUseBtns">
-            <q-btn flat @click="usePoint += 500">500</q-btn>
-            <q-btn flat @click="usePoint += 1000">1,000</q-btn>
             <q-btn flat @click="usePoint = 0">초기화</q-btn>
+            <q-btn flat @click="usePoint += 500">+500</q-btn>
+            <q-btn flat @click="usePoint += 1000">+1,000</q-btn>
             <q-btn flat @click="usePoint = myPoint" class="all">전액사용</q-btn>
           </div>
         </div>
@@ -68,55 +68,56 @@
           </li>
         </ul>       
       </dd>
-      
-      
     </dl>
 
-    <div class="finish">
-        <ul class="agree">
-          <li @click="check1 = !check1">
-            <q-checkbox
-              dense
-              v-model="check1"
-              checked-icon="check_circle"
-              unchecked-icon="check_circle_outline"
-              label="서비스이용 동의"
-              size="50px"
-            />
-            <q-btn outline class="agreeBtn" @click.stop="()=>{}">
-              약관보기
-            </q-btn>
-          </li>
-          <li @click="check2 = !check2">
-            <q-checkbox
-              dense
-              v-model="check2"
-              checked-icon="check_circle"
-              unchecked-icon="check_circle_outline"
-              label="개인정보 취급방침"
-              size="50px"
-            />
-            <q-btn outline class="agreeBtn" @click.stop="()=>{}">
-              약관보기
-            </q-btn>
-          </li>
-        </ul>
+    <div class="divider"></div>
 
-        <div class="company">
-          <strong>(주)페이오티</strong>
-          <span>사업자등록번호: 599-81-00659</span>
-          <span>통신판매업: 2021-부산강서구-0877</span>
-          <span>소재지: 부산광역시 강서구 대저1동 2304-3</span>
-          <span>대표자: 차경진</span>
-          <span>연락처: 070-4709-1003</span>
-        </div>
+    <div class="finish">
+      <div class="company">
+        <strong>(주)페이오티</strong>
+        <span>사업자등록번호: 599-81-00659</span>
+        <span>통신판매업: 2021-부산강서구-0877</span>
+        <span>소재지: 부산광역시 강서구 대저1동 2304-3</span>
+        <span>대표자: 차경진</span>
+        <span>연락처: 070-4709-1003</span>
       </div>
+      <ul class="agree">
+        <li @click="check1 = !check1">
+          <q-checkbox
+            dense
+            v-model="check1"
+            checked-icon="check_circle"
+            unchecked-icon="check_circle_outline"
+            label="서비스이용 동의"
+            size="50px"
+          />
+          <q-btn outline class="agreeBtn" @click.stop="()=>{}">
+            약관보기
+          </q-btn>
+        </li>
+        <li @click="check2 = !check2">
+          <q-checkbox
+            dense
+            v-model="check2"
+            checked-icon="check_circle"
+            unchecked-icon="check_circle_outline"
+            label="개인정보 취급방침"
+            size="50px"
+          />
+          <q-btn outline class="agreeBtn" @click.stop="()=>{}">
+            약관보기
+          </q-btn>
+        </li>
+      </ul>
 
       <div class="bottom_btns">
         <q-btn flat class="q-btn" @click="$router.push('finish')">
-          결제하기
+          5,000원 결제하기
         </q-btn>
       </div>
+    </div>
+
+    
   </div>
 </template>
 

@@ -9,7 +9,7 @@
         <h5>장비를 선택해주세요</h5>
       </div>
 
-      <q-btn flat class="close-btn">닫기</q-btn>
+      <q-btn flat class="close-btn" v-close-popup>닫기</q-btn>
 
       <div class="tabs">
         <q-btn flat 
@@ -52,7 +52,7 @@
 <script lang="ts" setup>
 import {ref} from 'vue'
 
-const visible = ref(true)
+const visible = ref(false)
 const tabActive = ref(0)
 
 </script>

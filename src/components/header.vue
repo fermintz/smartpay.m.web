@@ -5,9 +5,9 @@
       <span>워시앤클린 금정점</span> 
     </div>
 
-    <!-- <q-btn flat round>
-      <q-icon name="logout"></q-icon>
-    </q-btn> -->
+    <q-btn flat round>
+      <q-icon name="qr_code"></q-icon>
+    </q-btn>
   </div>
 </template>
 

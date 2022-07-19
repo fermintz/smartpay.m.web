@@ -1,78 +1,76 @@
 <template>
-  <div class="login">
-    <div class="top">
-      <div class="logo">
-        <img src="@/assets/img/logo_b.png" />
-        <span>워시프렌즈 금정점</span>
-      </div>
-      
+  <q-layout>
+    <div class="login">
+      <div class="top">
+        <div class="logo">
+          <img src="@/assets/img/logo_b.png" />
+          <span>워시프렌즈 금정점</span>
+        </div>
+        
+        <div class="text">
+          <h5>
+            어플없이 간편결제!<br>
+            <b>전화번호로 간편하게</b> 이용하세요
+          </h5>
+        </div>
+        
+        <q-form @submit="toggle">
+          <label>휴대폰번호를 입력</label>
+          <q-input
+            type="tel"
+            v-model="text"
+            placeholder="010"
+            :clearable="text.length >= 4 ? true : false"
+            @clear="text = '010'"
+            clear-icon="close"
+            maxlength="11"
+            @focus="focusAction"
+            @blur="blurAction"
+          >
+            <template v-slot:hint> '-' 를 제외한 숫자만 입력해주세요 </template>
+          </q-input>
+        </q-form>
+        <div class="btns">
+          <q-btn
+            class="full-width"
+            type="submit"
+            unelevated
+            color="primary"
+            :disable="loginBtnState()"
+            @click="toggle"
+          >
+            로그인
+          </q-btn>
+        </div>
+      </div> <!-- top -->
 
-      <div class="text">
-        <p>
-          <b>A01세탁기</b>를 선택하셨습니다
-        </p>
-        <h5>
-          <b>5초만에 회원가입</b>하고 간편하게 스마트페이를 사용해보세요
-        </h5>
-      </div>
-      
-      
-
-      <q-form @submit="toggle">
-        <label>휴대폰번호 입력</label>
-        <q-input
-          type="tel"
-          v-model="text"
-          placeholder="010"
-          :clearable="text.length >= 4 ? true : false"
-          @clear="text = '010'"
-          clear-icon="close"
-          maxlength="11"
-          @focus="focusAction"
-          @blur="blurAction"
+      <div class="banner">
+        <q-carousel
+          v-model="slide"
+          transition-prev="slide-right"
+          transition-next="slide-left"
+          infinite
+          :autoplay="4000"
+          animated
+          control-type="flat"
+          control-color="white"
+          navigation
+          arrows
+          height="auto"
         >
-          <template v-slot:hint> '-' 를 제외한 숫자만 입력해주세요 </template>
-        </q-input>
-      </q-form>
-      <div class="btns">
-        <q-btn
-          class="full-width"
-          type="submit"
-          unelevated
-          color="primary"
-          :disable="loginBtnState()"
-          @click="toggle"
-        >
-          로그인
-        </q-btn>
+          <q-carousel-slide :name="0">
+            <img src="@/assets/img/login_slide01.png">
+          </q-carousel-slide>
+          <q-carousel-slide :name="1">
+            <img src="@/assets/img/login_slide01.png">
+          </q-carousel-slide>
+        </q-carousel>
       </div>
     </div>
 
-    <div class="banner">
-      <q-carousel
-        v-model="slide"
-        transition-prev="slide-right"
-        transition-next="slide-left"
-        infinite
-        :autoplay="4000"
-        animated
-        control-type="flat"
-        control-color="white"
-        navigation
-        arrows
-        height="auto"
-      >
-        <q-carousel-slide :name="0">
-          <img src="@/assets/img/login_slide01.png">
-        </q-carousel-slide>
-        <q-carousel-slide :name="1">
-           <img src="@/assets/img/login_slide01.png">
-        </q-carousel-slide>
-      </q-carousel>
-    </div>
-  </div>
-
-  <UserLogin />
+    <UserLogin />
+  </q-layout>
+  
 </template>
 
 <style lang="scss" src="./login.scss" scoped />

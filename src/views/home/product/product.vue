@@ -4,7 +4,7 @@
     <div class="top">
       <p>고객님이 선택하신 장비는</p>
       <div class="selectBtn">
-        <label>세탁장비 01번 입니다만 아닌가 모르겠네</label>
+        <label>세탁장비 01번</label>
         <q-icon name="expand_more" size="18px"></q-icon>
       </div>
     </div>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="tabCont" v-show="tabState === 0">
-      <h6>상품목록 <b>7개</b></h6>
+      <h6>상품을 선택해주세요</h6>
 
       <div class="goodsList">
         <div class="goodsItem row" @click="$router.push('detail')">
@@ -76,8 +76,6 @@
       </div>
     </div>
 
-    <div class="divider"></div>
-
     <div class="company">
       <strong>(주)페이오티</strong>
       <span>사업자등록번호: 599-81-00659</span>
@@ -88,6 +86,7 @@
     </div>
     <AlertModal />
     <EqSelector />
+    <Loading />
   </div>
 </template>
 
@@ -96,6 +95,7 @@ import Header from "@/components/header.vue";
 import Confirm from "@/components/modal/confirm/confirm.vue";
 import Alert from "@/components/modal/alert/alert.vue";
 import EqSelector from '@/components/modal/eqSelector/eqSelector.vue'
+import Loading from '@/components/modal/loading/loading.vue'
 import { useQuasar, } from "quasar";
 import { onBeforeUnmount, ref } from "vue";
 
@@ -120,19 +120,19 @@ onBeforeUnmount(()=>{
 })
 
 
-const showLoading = ()=>{    
-  $q.loading.show({
-    message:'자료를 불러오는 중입니다.',
-    spinnerSize:70,
-  })
+// const showLoading = ()=>{    
+//   $q.loading.show({
+//     message:'자료를 불러오는 중입니다.',
+//     spinnerSize:70,
+//   })
 
-  timer = setTimeout(()=>{
-    $q.loading.hide()
-    timer = void 0
-  },1500)
-}
+//   timer = setTimeout(()=>{
+//     $q.loading.hide()
+//     timer = void 0
+//   },1500)
+// }
 
-showLoading();
+// showLoading();
 
 
 const alert = async ()=>{

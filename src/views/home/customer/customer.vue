@@ -7,13 +7,13 @@
     
     </div> -->
 
-    <!-- <div class="section">
+    <div class="section">
       <h6>공지사항</h6>
       <div class="notice">
         <strong>21.06.14</strong>
         <p>안녕하세요 워시앤클린 광안점입니다 오늘부터 적립 2배 이벤트를 시작합니다 많은 이용 부탁드립니다</p>
       </div>
-    </div> -->
+    </div>
 
     <div class="section">
       <h6>고객센터</h6>
@@ -36,16 +36,16 @@
         <div class="agree_btns">
           <q-btn flat class="full-width" align="between" @click="agree1">
             <label>서비스 이용약관</label>
-            <q-icon name="arrow_right"></q-icon>
+            <q-icon name="navigate_next"></q-icon>
           </q-btn>
           <q-btn flat class="full-width" align="between" @click="agree2">
             <label>개인정보 취급방침</label>
-            <q-icon name="arrow_right"></q-icon>
+            <q-icon name="navigate_next"></q-icon>
           </q-btn>
         </div>
       </div>
     </div>
-  </div>
+  </div> <!-- customer -->
 </template>
 
 <script setup lang="ts">

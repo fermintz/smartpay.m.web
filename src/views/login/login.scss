@@ -3,13 +3,12 @@
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  height:calc(var(--vh, 1vh) * 100);
+ 
+  // height:calc(var(--vh, 1vh) * 100);
 
-  
   .top{
-    
     position: relative;
+    top:0px;
     z-index:2;
     padding:30px;
     width:100%;
@@ -40,16 +39,6 @@
       flex-direction: column;
       align-items: flex-start;
 
-      p{
-        margin-bottom:10px;
-        color:#797979;
-        b{
-          color:$dark;
-          text-decoration: underline;
-          font-weight:normal;
-          
-        }
-      }
 
       h5{
         position: relative;
@@ -60,7 +49,8 @@
 
         b{
           color:$primary;
-          font-weight:normal;
+          font-weight:bold;
+          box-shadow: inset 0 -8px 0 rgba(0,144,255,0.2);
         }
       }
     
@@ -96,9 +86,10 @@
 
   .banner{
     z-index:1;
-    position: absolute;
+    position: fixed;
     bottom:0px;
     width:100%;
+
     .q-carousel__slide{
       padding:0;
 
