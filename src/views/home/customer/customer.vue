@@ -22,6 +22,7 @@
           <q-icon name="phone"></q-icon>
           <span>070-7761-1486</span>
         </div>
+        <div class="divider"></div>
         <div class="row">
           <div class="col-6">
             <strong>소재지</strong>
