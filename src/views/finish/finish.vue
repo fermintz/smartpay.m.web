@@ -37,7 +37,7 @@
         <img src="@/assets/img/last.png">
       </div>
       <p>
-        <b>A01세탁기</b>의 시작버튼을 눌러 사용해주세요
+        <b>A01세탁기</b>의 코스 선택 후 세탁을 시작해주세요
       </p>
     </div>
   </div>

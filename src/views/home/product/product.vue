@@ -23,35 +23,39 @@
     </div>
 
     <div class="tabCont" v-show="tabState === 0">
-      <h6>상품을 선택해주세요</h6>
+      <h6>결제금액에 <b>포인트 5%</b>가 적립됩니다</h6>
 
       <div class="goodsList">
-        <div class="goodsItem row" @click="$router.push('detail')">
-          <div class="left">
-            <label>Event</label>
-            <strong>이름이 매우매우 긴 간편한 세탁</strong>
-            <span span>15분</span>
-          </div>
-          <div class="right">
-            <span>9,000원</span>
-            <strong> 7,000 </strong>
-          </div>
-          <q-icon name="chevron_right" size="18px"></q-icon>
-        </div>
-
-        <div class="goodsItem row" v-for="item in 3" :key="item">
-          <div class="left">
-            <label v-show="false">이벤트</label>
-            <div class="info">
-              <strong>기본세탁</strong>
+        <!-- <div class="goodsItem" @click="$router.push('detail')">
+          <div class="row">
+            <div class="left">
+              <label>Event</label>
+              <strong>이름이 매우매우 긴 간편한 세탁</strong>
               <span span>15분</span>
             </div>
+            <div class="right">
+              <span>9,000원</span>
+              <strong> 7,000 </strong>
+            </div>
+            <q-icon name="chevron_right" size="18px"></q-icon>
           </div>
-          <div class="right">
-            <span v-show="false">9,000원</span>
-            <strong> 7,000 </strong>
-          </div>
-          <q-icon name="chevron_right" size="18px"></q-icon>
+        </div> -->
+
+        <div class="goodsItem" v-for="item in 3" :key="item" @click="$router.push('detail')">
+          <div class="row">
+            <div class="left">
+              <label v-show="false">이벤트</label>
+              <div class="info">
+                <strong>기본세탁</strong>
+                <span span>15분</span>
+              </div>
+            </div>
+            <div class="right">
+              <span v-show="false">9,000원</span>
+              <strong> 7,000 </strong>
+            </div>
+            <q-icon name="chevron_right" size="18px"></q-icon>
+          </div>          
         </div>
       </div>
     </div>

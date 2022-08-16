@@ -48,6 +48,7 @@
     <dl class="credit">
       <dt>결제정보</dt>
       <dd class="credit_info">
+        <p>결제금액에 <b>포인트 5%</b>가 적립됩니다</p>
         <div class="total">
           <span>총 결제금액</span>
           <strong>5,000원</strong>
@@ -62,9 +63,9 @@
             <span>사용포인트</span>
             <strong>-{{usePoint}}원</strong>
           </li>
-          <li>
+          <li class="point">
             <span>적립예상 포인트</span>
-            <strong>500P</strong>
+            <strong>+500P</strong>
           </li>
         </ul>       
       </dd>

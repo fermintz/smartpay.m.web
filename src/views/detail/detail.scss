@@ -135,6 +135,17 @@
 
   .credit{
     dd.credit_info{
+      p{
+        margin-bottom:20px;
+        background:#FBF1F5;
+        padding:10px;
+        border-radius:5px;
+
+        b{
+          color:$secondary;
+        }
+      }
+
       .total{
         display:flex;
         align-items: center;
@@ -142,7 +153,7 @@
 
         strong{
           font-size:20px;
-          color:$secondary;
+          color:$primary;
         }
       }
       
@@ -159,6 +170,12 @@
 
           span{
             font-size:12px;
+          }
+        }
+
+        li.point{
+          strong{
+            color:$secondary
           }
         }
       }

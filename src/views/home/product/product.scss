@@ -72,10 +72,15 @@
   h6{
     display:flex;
     align-items: center;
-    font-size:14px;
+    font-size:18px;
     margin-bottom:10px;
     font-weight:normal;
-    color:#898989;
+    color:#292929;
+
+    b{
+      color:$secondary;
+      margin-left:5px;
+    }
 
 
     &::before{
@@ -106,6 +111,11 @@
         span,strong{
           display:block;
         }
+
+        .row{
+          align-items: center;
+        }
+
 
         .left{
           flex:1;
@@ -138,7 +148,7 @@
         strong{
           font-size:20px;
           line-height:1;
-          color:$primary;
+          color:$dark;
 
           &:after{
             content:'원';
@@ -154,7 +164,30 @@
         border-radius:50%;
         margin-left:15px;
       }
+
+      p{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        background:#f8f8f8;
+        padding:0 10px;
+        height:24px;
+        font-size:13px;
+        margin-top:15px;
+        border-radius:5px;
+        
+        span{
+          b{
+            color:$secondary;
+          }
+        }
+        strong{
+          color:$primary;
+        }
+      }
     }
+
+    
   }
 
 
