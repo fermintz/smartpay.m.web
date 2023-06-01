@@ -3,7 +3,7 @@
 </template>
 
 
-<script lang="ts"  setup>
+<script lang="ts" setup>
 
 const setScreenSize = () => {
   let vh = window.innerHeight * 0.01;
